@@ -1,12 +1,19 @@
 package main
 
 import (
-	"github.com/axhutoxh/go-starter/config"
-	models "github.com/axhutoxh/go-starter/models/users"
-	"github.com/axhutoxh/go-starter/router"
+	"log"
+
+	"github.com/hale-services/config"
+	models "github.com/hale-services/models/users"
+	"github.com/hale-services/router"
+	"github.com/joho/godotenv"
 )
 
 func main() {
+	err := godotenv.Load()
+	if err != nil {
+		log.Fatal("Error loading .env file")
+	}
 	config.ConnectDatabase()
 	config.DB.AutoMigrate(&models.User{}, &models.UserFitnessProfile{})
 

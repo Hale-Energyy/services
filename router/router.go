@@ -1,8 +1,8 @@
 package router
 
 import (
-	handlers "github.com/axhutoxh/go-starter/handlers/users"
 	"github.com/gin-gonic/gin"
+	handlers "github.com/hale-services/handlers/users"
 )
 
 func SetUpRouter() *gin.Engine {

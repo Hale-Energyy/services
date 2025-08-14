@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/axhutoxh/go-starter/config"
-	models "github.com/axhutoxh/go-starter/models/users"
 	"github.com/gin-gonic/gin"
+	"github.com/hale-services/config"
+	models "github.com/hale-services/models/users"
 )
 
 func CreateUser(c *gin.Context) {
